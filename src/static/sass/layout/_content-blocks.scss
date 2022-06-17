@@ -1,0 +1,421 @@
+// Content
+.bg-right {
+  background: url("../imgs/bg-right.png") 530px -6px no-repeat transparent;
+  background-size: contain;
+  @media (max-width: 1190px) {
+    background-position-x: 390px;
+  }
+  @media (max-width: 970px) {
+    background-position-x: 290px;
+  }
+  @media (max-width: 860px) {
+    background-size: initial;
+    background-position: 100px top;
+  }
+  @media (max-width: 660px) {
+    background-position-x: 0;
+    background-size: 188%;
+  }
+}
+
+.bg-left {
+  background: url("../imgs/bg-left.png") -375px -6px no-repeat transparent;
+  background-size: contain;
+  @media (max-width: 1300px) {
+    background-position-x: -550px;
+  }
+  @media (max-width: 1000px) {
+    background-position-x: -450px;
+  }
+  @media (max-width: 860px) {
+    background-size: initial;
+    background-position: -450px top;
+  }
+  @media (max-width: 660px) {
+    background-position-x: 0;
+    background-size: 188%;
+  }
+}
+
+.callout {
+  color: $primary;
+  font-size: 2rem;
+}
+
+.what-we-do, .the-media {
+  .flex {
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
+  .w-65 {
+    @media (max-width: 880px) {
+      width: 100%;
+    }
+  }
+  .ico-group, .media {
+    margin-right: 2rem;
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: {
+        right: 0;
+        bottom: 2rem;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    h3 {
+      margin-top: 1.5rem;
+    }
+    h5 {
+      color: $black;
+      opacity: .5;
+    }
+  }
+}
+
+.the-media {
+  .media-title {
+    @media (max-width: 830px) {
+      display: flex;
+    }
+  }
+}
+
+.rehabilitate, .mentality {
+  .flex {
+    @media (max-width: 860px) {
+      display: grid;
+    }
+  }
+  .w-40, .w-50 {
+    @media (max-width: 860px) {
+      width: 100%;
+    }
+  }
+  .w-50 {
+    @media (max-width: 860px) {
+      margin-bottom: 3rem;
+      order: 1;
+    }
+  }
+  .w-40 {
+    @media (max-width: 860px) {
+      order: 2;
+    }
+  }
+}
+
+.performance-services {
+  .flex {
+    @media (max-width: 860px) {
+      display: grid;
+    }
+  }
+  .w-40, .w-50 {
+    @media (max-width: 860px) {
+      width: 100%;
+    }
+  }
+  .w-50 {
+    @media (max-width: 860px) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+ul {
+  &.checks {
+    list-style: none;
+    margin: 0 0 2rem;
+    li {
+      color: $black;
+      font-weight: 700;
+      margin: 0 0 .75rem;
+      padding-left: 2rem;
+      position: relative;
+      &:before {
+        content: "";
+        background: url("../imgs/ico-check.svg") center no-repeat transparent;
+        background-size: 22px;
+        width: 22px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.media-wrap {
+  .media {
+    margin-right: 2rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    h6 {
+      color: $primary;
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      a {
+        color: $dark-gray;
+        font-size: .875rem;
+        text: {
+          decoration: none;
+          transform: uppercase;
+        }
+        .fa-solid {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.our-team {
+  .w-65 {
+    @media (max-width: 880px) {
+      width: 100%;
+    }
+  }
+  .team-overflow {
+    @media (max-width: 1140px) {
+      overflow-x: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+.team-wrap {
+  .team {
+    flex-wrap: wrap;
+    @media (max-width: 1140px) {
+      // width: 300%;
+      width: 2300px;
+      display: block;
+    }
+    @media (max-width: 660px) {
+      // width: 1000%;
+    }
+  }
+  .member {
+    width: 31%;
+    margin-bottom: 2rem;
+    position: relative;
+    @media (max-width: 1140px) {
+      width: 347px;
+      margin-right: 2rem;
+      display: inline-block;
+    }
+    .member-toggle {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .meta {
+      background: rgba(100, 139, 232, 0.1);
+      backdrop-filter: blur(12px);
+      width: 100%;
+      padding: 1.125rem 1.25rem;
+      &.active {
+        background-color: rgba($primary, .75);
+        i {
+          color: $black;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      h5 {
+        color: $white;
+        font-size: 1.5rem;
+        margin-bottom: .15rem;
+      }
+      h6 {
+        color: rgba($white, .7);
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      i {
+        color: $secondary;
+        font-size: 2rem;
+        text-align: right;
+        display: inline-block;
+      }
+    }
+    .overlay {
+      background-color: rgba($primary, .75);
+      backdrop-filter: blur(12px);
+      height: 100%;
+      padding: 1.125rem 1.25rem;
+      p {
+        color: $white;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.partners-wrap {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9dcaf7+0,648be8+100 */
+  background: #648be8;
+  background: -moz-linear-gradient(133.45deg,  #9dcaf7 0%, #648be8 100%);
+  background: -webkit-linear-gradient(133.45deg,  #9dcaf7 0%,#648be8 100%);
+  background: linear-gradient(133.45deg,  #9dcaf7 0%,#648be8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dcaf7', endColorstr='#648be8',GradientType=1 );
+  h2 {
+    color: $black;
+  }
+  .partners {
+    align-items: stretch;
+    @media (max-width: 1020px) {
+      flex-wrap: wrap;
+    }
+    .w-20 {
+      @media (max-width: 1020px) {
+        width: 33%;
+      }
+      @media (max-width: 760px) {
+        width: 50%;
+      }
+    }
+    .partner {
+      border-right: 1px dashed rgba($black,.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 1020px) {
+        margin-bottom: 2rem;
+        &:nth-child(3) {
+          border-right: none;
+        }
+      }
+      @media (max-width: 760px) {
+        &:nth-child(even) {
+          border-right: none;
+        }
+        &:nth-child(3) {
+          border-right: 1px dashed rgba($black,.25);
+        }
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+      img {
+        max-width: 133px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+.form-overlay {
+  background-color: rgba($primary, .5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4444;
+  h2 {
+    i {
+      color: rgba($black, .5);
+      font-size: 2rem;
+      margin-top: 4px;
+      float: right;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .form {
+    background-color: $white;
+    width: 100%;
+    max-width: 375px;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 7777;
+    @media (max-width: 670px) {
+      width: 100%;
+      max-width: none;
+    }
+    .w-50 {
+      &:first-of-type {
+        margin-right: .25rem;
+      }
+      &:last-of-type {
+        margin-left: .25rem;
+      }
+    }
+    .flex {
+      margin-bottom: .5rem;
+    }
+    label {
+      display: none;
+    }
+    input {
+      width: 100%;
+      border-radius: 0;
+      &[type=text] {
+        background: rgba($secondary, .15);
+        color: rgba($black, .75);
+        font-size: .875rem;
+        width: 100%;
+        padding: .81rem 1rem;
+        border: none;
+      }
+      &[type=button] {
+        border-radius: 1rem;
+        border: none;
+      }
+    }
+    textarea {
+      background: rgba($secondary, .15);
+      color: rgba($black, .75);
+      font-size: .875rem;
+      width: 100%;
+      padding: .81rem 1rem;
+      border: none;
+    }
+    select {
+      background: url("../imgs/ico-select.svg") 95% center no-repeat rgba($secondary, .15);
+      color: rgba($black, .75);
+      font-size: .875rem;
+      width: 100%;
+      padding: .81rem 1rem;
+      border: none;
+      border-radius: 0;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+    ::placeholder {
+      color: rgba($black, .75);
+      font-size: .875rem;
+    }
+  }
+}
+.error-message {
+  margin-top: 5px;
+  color: red;
+  font-size: .75rem;
+}

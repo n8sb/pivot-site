@@ -1,0 +1,48 @@
+// Buttons
+.btn {
+  color: $white;
+  font: {
+    family: $font-family-display, $font-stack;
+    size: 1.125rem;
+    weight: 500;
+  }
+  text: {
+    align: center;
+    decoration: none;
+    transform: uppercase;
+  }
+  line-height: 1;
+  padding: .5rem 1rem .35rem;
+  border-radius: 1rem;
+  display: inline-block;
+  &:focus, &:hover {
+    color: $black;
+    cursor: pointer;
+  }
+  &.btn-primary {
+    background: $primary;
+    background: -moz-linear-gradient(133.45deg,  $secondary 0%, $primary 100%);
+    background: -webkit-linear-gradient(133.45deg,  $secondary 0%,$primary 100%);
+    background: linear-gradient(133.45deg,  $secondary 0%,$primary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary', endColorstr='$primary',GradientType=1 );
+
+  }
+  &.btn-contact {
+    background: $primary;
+    background: -moz-linear-gradient(133.45deg,  $secondary 0%, $primary 100%);
+    background: -webkit-linear-gradient(133.45deg,  $secondary 0%,$primary 100%);
+    background: linear-gradient(133.45deg,  $secondary 0%,$primary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary', endColorstr='$primary',GradientType=1 );
+    font-size: 1.6875rem;
+    padding: .75rem 3.315rem .56rem 1.125rem;
+    -webkit-border-radius: 1rem 0 0 1rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    box-shadow: 20px 20px 56px #7098EC;
+  }
+  &.btn-black {
+    background-color: $black;
+    &:hover {
+      color: white;
+    }
+  }
+}

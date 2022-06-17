@@ -1,0 +1,34 @@
+// Variables
+
+// Layout
+$page-width: 1440px;
+$container-width: 1120px;
+$lg-break: 992px;
+$med-break: 768px;
+$sm-break: 767px;
+
+// Colors
+$primary: #648be8;
+$secondary: #9dcaf7;
+$white: #fff;
+$black: #000;
+$dark-gray: #222;
+$medium-gray: #999;
+// $light-gray: #cacac8;
+$bg-color: $white;
+
+// Fonts
+$font-family-sans-serif: 'Inter';
+$font-family-display: 'Teko';
+$font-family-base: $font-family-sans-serif;
+$font-stack: 'Helvetica Neue', Helvetica, sans-serif;
+
+//Type
+$font-size-base: 16px;
+$font-line-height-base: 1.5;
+$header-1: 2.5rem; // 40px
+$header-2: 2.5rem; // 32px
+$header-3: 2rem; // 24px
+$header-4: 2rem; // 20px
+$header-5: 1.125rem; // 18px
+$header-6: 1rem; // 16px

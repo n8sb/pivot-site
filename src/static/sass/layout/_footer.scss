@@ -1,0 +1,45 @@
+// Footer
+.contact-wrap {
+  background-color: rgba($black, .9);
+  @media (max-width: 830px) {
+    .w-50 {
+      width: 100%;
+    }
+  }
+  p {
+    color: $white;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    a {
+      color: $white;
+      text-transform: uppercase;
+      &:hover {
+        color: $primary;
+      }
+      &.btn {
+        &:hover {
+          color: rgba($white, .75);
+        }
+      }
+    }
+  }
+  img {
+    margin: 0 auto 2rem;
+    display: block;
+  }
+}
+
+.footer-wrap {
+  background-color: $black;
+  @media (max-width: 830px) {
+    .w-50 {
+      width: 100%;
+    }
+  }
+  p {
+    color: $white;
+    font-size: .75rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}

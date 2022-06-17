@@ -1,0 +1,70 @@
+// Header
+.hero-wrap {
+  background: url("../imgs/bg-hero.jpg") center top no-repeat $white;
+  background-size: cover;
+  position: relative;
+  .hero {
+    position: relative;
+    @media (max-width: 730px) {
+      padding-bottom: 0;
+    }
+    .hero-feature {
+      position: absolute;
+      bottom: -2rem;
+      right: -20%;
+      z-index: 1111;
+      @media (max-width: 900px) {
+        right: -40%;
+      }
+      @media (max-width: 730px) {
+        position: relative;
+        bottom: -2rem;
+        right: auto;
+      }
+    }
+  }
+  .hero-brand {
+    margin-bottom: 6.15rem;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+  .hero-content {
+    position: relative;
+    z-index: 3333;
+    .w-50 {
+      @media (max-width: 730px) {
+        width: 80%;
+      }
+      @media (max-width: 660px) {
+        width: 100%;
+      }
+    }
+    h1 {
+      font: {
+        size: 3rem;
+        weight: 500;
+      }
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+    p {
+      color: $white;
+    }
+    img {
+      position: absolute;
+      bottom: -29px;
+      right: -50px;
+    }
+  }
+  .btn-contact {
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    z-index: 3333;
+    @media (max-width: 710px) {
+      top: auto;
+      bottom: 6rem;
+    }
+  }
+}
