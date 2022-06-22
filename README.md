@@ -26,9 +26,9 @@ And replace the exisiting scripts in package.json with these:
   "eleventy": "eleventy --watch",
   "debug": "set DEBUG=* & eleventy",
   "build": "cross-env NODE_ENV=production eleventy",
-  "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open",
-  "watch:sass": "sass --watch src/static/sass:_site/static/css",
-  "build:sass": "sass src/static/sass:_site/static/css"
+  "browsersync": "browser-sync start --server 'public' --files 'public' --port 8080 --no-notify --no-open",
+  "watch:sass": "sass --watch src/static/sass:src/static/css",
+  "build:sass": "sass src/static/sass:src/static/css"
 ```
 
 For Tailwind, use the following:
@@ -37,9 +37,9 @@ For Tailwind, use the following:
  "start": "npm-run-all --parallel css eleventy browsersync",
   "eleventy": "eleventy --watch",
   "debug": "set DEBUG=* & eleventy",
-  "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
-  "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o _site/static/css/style.css",
-  "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
+  "css": "postcss src/static/css/tailwind.css --o public/static/css/style.css --watch",
+  "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o public/static/css/style.css",
+  "browsersync": "browser-sync start --server 'public' --files 'public' --port 8080 --no-notify --no-open"
 ```
 
 | ![image](https://user-images.githubusercontent.com/1884712/93762662-a62e4700-fc2d-11ea-9b2c-fda9f503402b.png) |

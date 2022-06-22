@@ -1,4 +1,5 @@
 backend:
+  site_url: https://thepivot.group
   # Use netlify identity as backend
   name: git-gateway
   branch: master
@@ -30,6 +31,19 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+  - label: "Team Bio"
+    name: "team bio"
+    identifier_field: name
+    folder: "src/bios"
+    create: true
+    editor:
+      preview: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Job Title", name: "title", widget: "string" }
+      - { label: "Headshot", name: "headshot", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - label: "Settings"
     name: "settings"
     editor:

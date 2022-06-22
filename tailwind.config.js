@@ -4,9 +4,7 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {
-      colors: {},
-    },
+    extend: {},
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],

@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Martel-Regular;
+  src: url("./fonts/Martel-Regular.ttf");
+}
+
+@font-face {
+  font-family: Martel-Light;
+  src: url("./fonts/Martel-Light.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,11 +20,26 @@
 /*Your Custom CSS Goes here*/
 
 h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+  /* @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+   */
+  font-family: "Martel-Light", "serif";
+  font-size: 40px;
+  @apply font-extralight;
 }
 
-h3 {
-  @apply text-2xl font-bold mb-3;
+h2 {
+  font-family: "Martel-Light", "serif";
+  font-size: 26px;
+}
+
+p {
+  font-family: "Roboto", "Helvetica Neue", "sans-serif";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+a {
+  font-size: 14px;
 }
 
 /* Syntax Highlighting*/
