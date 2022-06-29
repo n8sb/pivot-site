@@ -1,11 +1,7 @@
 items:
   - text: About
-    url: /about
-  - text: Our Work
-    url: /work
+    url: "#about"
   - text: Team
-    url: /team
+    url: "#team"
   - text: Contact
-    url: /contact
-  - text: Blog
-    url: /blog
+    url: "#contact"

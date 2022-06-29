@@ -1,6 +1,6 @@
 ---
 name: Neil Huxley
-title: All Things Feature & VFX Film -- He’s The Guy!
+title: Feature & VFX Film
 headshot: /static/img/headshots/neil-huxley-headshot.jpg
 date: 2022-01-06
 ---
