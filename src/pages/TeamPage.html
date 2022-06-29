@@ -1,0 +1,33 @@
+---
+permalink: "/team/index.html"
+layout: team-archive
+relative_path: ".."
+---
+
+<section class="mt-15">
+  {% for bio in collections.bios | reverse %}
+  <article class="my-8">
+    <h2 class="font-bold text-3xl text-gray-900 mb-2">
+      <a href="{{ bio.url | url }}">
+        {% if bio.data.name %} {{ bio.data.name }} {% else %} Untitled {% endif
+        %}
+      </a>
+    </h2>
+    <p class="text-base leading-6 text-gray-500 mb-3">
+      <time>
+        {{ bio.date | readableDate }} by
+        <a>{{ bio.data.author }}</a>
+      </time>
+    </p>
+    {% if bio.data.description %}
+    <p class="text-lg text-gray-500 mb-3">{{ bio.data.description }}</p>
+    {% endif %}
+
+    <p>
+      <a href="{{ bio.url | url }}" class="text-indigo-500 font-bold text-lg">
+        Meet {{bio.data.name}} →
+      </a>
+    </p>
+  </article>
+  {% endfor %}
+</section>

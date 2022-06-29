@@ -7,7 +7,7 @@ backend:
   # name: github
   # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
-public_folder: "/static/img"
+_site_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -31,8 +31,8 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
-  - label: "Team Bio"
-    name: "team bio"
+  - label: "Bios"
+    name: "bios"
     identifier_field: name
     folder: "src/bios"
     create: true

@@ -14,6 +14,10 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/**/*.md");
   });
 
+  eleventyConfig.addCollection("bios", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/bios/**/*.md");
+  });
+
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
@@ -28,7 +32,7 @@ module.exports = function (eleventyConfig) {
   // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
-  // Copy Static Files to /public
+  // Copy Static Files to /_site
   eleventyConfig.addPassthroughCopy({
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
@@ -36,10 +40,10 @@ module.exports = function (eleventyConfig) {
       "./static/css/prism-tomorrow.css",
   });
 
-  // Copy Image Folder to /public
+  // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
-  // Copy favicon to route of /public
+  // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
   // Minify HTML
@@ -62,8 +66,8 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "public",
       includes: "_includes",
+      output: "_site",
       layouts: "_layouts",
     },
     templateFormats: ["md", "njk", "html"],

@@ -1,6 +1,6 @@
 <div class="{{ 'lg:fixed' if path == 'home' }} w-full">
   <nav
-    class="flex items-center justify-center lg:justify-between flex-wrap p-6 mb-6 bg-[#fff]"
+    class="flex items-center justify-center lg:justify-between flex-wrap p-6 bg-[#fff]"
     x-data="{ isOpen: false }"
     @keydown.escape="isOpen = false"
     @click.away="isOpen = false"
@@ -48,7 +48,7 @@
       :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
       x-show.transition="true"
     >
-      {% if navigation.items %}
+      {# {% if navigation.items %}
 
       <ul
         class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
@@ -65,7 +65,7 @@
         {% endfor %}
       </ul>
 
-      {% endif %}
+      {% endif %} #}
     </div>
   </nav>
 </div>
