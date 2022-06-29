@@ -5,8 +5,7 @@
     "debug": "set DEBUG=* & eleventy",
     "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "clean": "npx rimraf ./_site",
-    "eleventy-build": "npx @11ty/eleventy",
-    "build": "npm-run-all --parallel clean eleventy-build css",
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o _site/static/css/style.css",
     "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
   },
   "devDependencies": {
