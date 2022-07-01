@@ -18,7 +18,7 @@
     />
     {% endif %}
   </head>
-  <body class="bg-[#F6F6F6]">
+  <body>
     {% include "navbar.html" %} {{ content | safe }}
 
     <script src="/static/js/alpine.js"></script>
@@ -32,7 +32,7 @@
     ></script>
     {% endif %}
     <script>
-      var scroll = new SmoothScroll('a[href*="#"]', { offset: 100 });
+      var scroll = new SmoothScroll('a[href*="#"]', { offset: 150 });
     </script>
   </body>
 </html>

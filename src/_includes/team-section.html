@@ -1,23 +1,22 @@
-<section id="team" class="text-gray-600 body-font container mt-15">
+<section id="team" class="text-gray-600 body-font container mt-20">
   <div class="flex flex-col text-center w-full">
-    <h1 class="text-2xl font-medium title-font mt-10 text-gray-900">
+    <h1 class="text-3xl font-medium title-font mt-10 text-gray-900">
       THE TEAM
     </h1>
+    <p></p>
   </div>
 
   <div class="flex flex-wrap">
     {% for bio in collections.bios %}
     <div class="p-4 lg:w-1/3 md:w-1/2">
       <div class="h-full flex flex-col items-center text-center">
-        <img
+       <a href="{{bio.url}}""><img
           alt="team"
           class="flex-shrink-0 rounded-lg object-cover object-center mb-4"
           src="{{bio.data.headshot}}"
-        />
+        /></a>
         <div class="w-full">
-          <p class="title-font font-medium text-lg text-gray-900">
-            <a>{{ bio.data.name }}</a>
-          </p>
+          <p class="font-large text-2xl text-gray-900">{{ bio.data.name }}</p>
           <p class="text-gray-500 mb-3">{{bio.data.title}}</p>
         </div>
       </div>
